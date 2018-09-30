@@ -1,0 +1,21 @@
+{
+  "name": "book-finder",
+  "version": "1.0.0",
+  "description": "buscador de livros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "book",
+    "livro",
+    "buscador",
+    "search",
+    "reading",
+    "leitura",
+    "read",
+    "ler"
+  ],
+  "author": "Talytta Carvalho",
+  "license": "ISC"
+}
