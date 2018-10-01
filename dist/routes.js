@@ -4,8 +4,8 @@ page("/bag", pageBag);
 page();
 
 function pageIndex() {
-    $("main").empty();
-    $("main").html(showHome());
+  $("main").empty();
+  $("main").html(showHome());
     showIndex();
     initBag();
     $("#totalSale").html(sumTotalSale());

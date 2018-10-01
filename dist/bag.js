@@ -27,7 +27,6 @@ function addBag(event) {
   localStorage.setItem("bagItems", JSON.stringify(bag));
 
   $("#totalSale").html(sumTotalSale());
-
 }
 
 function sumTotalSale() {
@@ -74,3 +73,4 @@ function removeFromBag(bookId){
   localStorage.setItem("bagItems", JSON.stringify(bag));
   listBag();
 }
+

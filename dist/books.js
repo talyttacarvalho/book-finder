@@ -46,9 +46,14 @@ function showBooks(book) {
     <p class="set-books">Author: ${book.authors.toString()}</p>
     <p class="set-books">Price: R$${book.price}</p>
     <img class="buy"src="${book.imageLinks}">
-    <p class="buy"><button class="click-buy btn btn-warning" data-title="${book.title}" data-price="${book.price}" onclick="addBag(event)">Buy</button></p>
-    <hr>
   `;
+  if(book.price == 'UNAVAILABLE'){
+    html += `<p class="buy"><button class="click-buy btn btn-warning" disabled="true" data-title="${book.title}" data-price="${book.price}" onclick="addBag(event)">Buy</button></p>
+    <hr>`
+  } else {
+    html += `<p class="buy"><button class="click-buy btn btn-warning" data-title="${book.title}" data-price="${book.price}" onclick="addBag(event)">Buy</button></p>
+    <hr>`
+  }
 
   $("#showBooks").append(html);
 }
