@@ -1,3 +1,13 @@
+function showListBooks() {
+  return `
+  <!-- Mostra os livros -->
+  <section id="book-store">
+    <div id="bagSale"></div>
+    <div id="showBooks"></div>
+  </section>
+    `
+}
+
 function findBook() {
 
   const key = "AIzaSyC2SPPOKqcmj51YuOnV3LNr7We8ErQKKKo";
@@ -8,10 +18,6 @@ function findBook() {
 
   $.get(api, loadBooks);
 
-}
-
-function search() {
-  return $("#inputSearchBooks").val();
 }
 
 function loadBooks(data) {

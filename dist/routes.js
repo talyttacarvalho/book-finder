@@ -5,12 +5,15 @@ page();
 
 function pageIndex() {
     $("main").empty();
-    $("main").html(showIndex());
+    $("main").html(showHome());
+    showIndex();
+    initBag();
+    $("#totalSale").html(sumTotalSale());
 }
 
 function pageBooks() {
     $("main").empty();
-    $("main").html(showIndex());
+    $("main").html(showListBooks());
     initBag();
     $("#totalSale").html(sumTotalSale());
     findBook();

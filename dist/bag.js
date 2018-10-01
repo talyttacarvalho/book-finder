@@ -1,6 +1,6 @@
 function showBag() {
   return `
-  <a href="/">Home</a>
+  <a href="/books">Home</a>
   <div>
       <div id="showBag"></div>
       <span id="totalSaleBag"></span>
@@ -38,7 +38,7 @@ function sumTotalSale() {
           totalSale += parseFloat(book.price);
       });
   }
-  return totalSale;
+  return totalSale.toFixed(2);
 }
 
 function listBag() {
