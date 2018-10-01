@@ -2,6 +2,7 @@ function showIndex(){
   $("#initializing").delay("3000").fadeToggle("slow");
   $("#main-screen").delay("3000").fadeIn("slow");
   $("#book-search").delay("3000").fadeIn("slow");
+  $("#bag").delay("3000").fadeIn("slow");
   $("#config-image").delay("3000").fadeIn("slow");
   $("footer").delay("3000").fadeIn("slow");
 }
@@ -24,10 +25,3 @@ function showHome(){
 function search() {
   return $("#inputSearchBooks").val();
 }
-
-
-
-    // <input id="inputSearchBooks" type="text" placeholder="Search Books">
-    // <a href="/books">Find</a>
-    // <div>Total: <span id="totalSale"></span> <a href="/bag">Show Your Bag</a></div>
-    // <div id="showBooks"></div>

@@ -33,7 +33,7 @@ function loadBooks(data) {
       book.publishedDate = item.volumeInfo.publishedDate;
       book.buyLink = item.saleInfo.buyLink;
       book.imageLinks = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.smallThumbnail : "";
-      book.price = (item.saleInfo.saleability === "FOR_SALE") ? item.saleInfo.listPrice.amount : "unavailable";
+      book.price = (item.saleInfo.saleability === "FOR_SALE") ? item.saleInfo.listPrice.amount : "UNAVAILABLE";
 
       showBooks(book);
   });

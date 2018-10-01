@@ -1,6 +1,6 @@
 function showBag() {
   return `
-  <a href="/books">Home</a>
+  <div class="set-home"><a href="/books" class="btn btn-warning">Home</a></div>
   <div>
       <div id="showBag"></div>
       <span id="totalSaleBag"></span>
@@ -50,16 +50,16 @@ function listBag() {
 
   bag.map((book) => {
       let html = `
-          <p>${book.title}</p>
-          <p>${book.price}</p>
-          <p><button onclick="removeFromBag(${book.id})">Remove</button></p>
+          <p class="set-books">Name: ${book.title}</p>
+          <p class="set-books">Price: R$${book.price}</p>
+          <p><button type="button" class="btn btn-danger" onclick="removeFromBag(${book.id})">Remove</button></p>
       `;
 
       $("#showBag").append(html);
   });
 
   $("#totalSale").html(sumTotalSale());
-  $("#totalSaleBag").html(sumTotalSale());
+  // $("#totalSaleBag").html(sumTotalSale());
 }
 
 function removeFromBag(bookId){
