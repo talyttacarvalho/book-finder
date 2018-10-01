@@ -4,7 +4,15 @@
   "description": "buscador de livros",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talyttacarvalho/book-finder"
   },
   "keywords": [
     "book",
@@ -17,5 +25,8 @@
     "ler"
   ],
   "author": "Talytta Carvalho",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.6.1"
+  }
 }
