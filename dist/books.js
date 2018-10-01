@@ -41,14 +41,10 @@ function loadBooks(data) {
 
 function showBooks(book) {
   let html = `
-          <hr>
-          <p>${book.title}</p>
-          <p>${book.description}</p>
-          <p>${book.authors.toString()}</p>
-          <p>${book.publisher}</p>
-          <p>${book.publishedDate}</p>
-          <p>${book.pages}</p>
-          <p>${book.price}</p>
+          <p class="set-books">Name: ${book.title}</p>
+          <p class="set-books">Description: ${book.description}</p>
+          <p class="set-books">Author: ${book.authors.toString()}</p>
+          <p class="set-books">Price: R$${book.price}</p>
           <img src="${book.imageLinks}">
           <p><button data-title="${book.title}" data-price="${book.price}" onclick="addBag(event)">Buy</button></p>
           <hr>

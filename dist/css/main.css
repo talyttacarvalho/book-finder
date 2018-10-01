@@ -77,7 +77,6 @@ body {
 
 }
 
-
 .book-search {
   display: flex;
   flex-direction: row;
@@ -101,6 +100,13 @@ body {
   margin: 20px 0px;
 }
 
-.set-info {
+.set-footer {
   font-family: 'Fredericka the Great', cursive;
+}
+
+.set-books {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 10px;
+
+
 }
