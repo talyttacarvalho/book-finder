@@ -21,6 +21,7 @@ function addBag(event) {
   let book = event.target.dataset;
 
   bag = JSON.parse(localStorage.getItem("bagItems"));
+  book.id = bag.length;
   bag.push(book);
 
   localStorage.setItem("bagItems", JSON.stringify(bag));
@@ -31,7 +32,7 @@ function addBag(event) {
 
 function sumTotalSale() {
   let totalSale = 0;
-  let bag = JSON.parse(localStorage.getItem("bagItems"))
+  bag = JSON.parse(localStorage.getItem("bagItems"))
 
   if (bag) {
       bag.map((book) => {
@@ -51,10 +52,25 @@ function listBag() {
       let html = `
           <p>${book.title}</p>
           <p>${book.price}</p>
+          <p><button onclick="removeFromBag(${book.id})">Remove</button></p>
       `;
 
       $("#showBag").append(html);
   });
 
+  $("#totalSale").html(sumTotalSale());
   $("#totalSaleBag").html(sumTotalSale());
+}
+
+function removeFromBag(bookId){
+  console.log(bookId);
+  bag = JSON.parse(localStorage.getItem("bagItems"));
+  console.log(bag);
+  bag = bag.filter((book) => {
+    return book.id != bookId;
+  });
+  console.log(bag);
+
+  localStorage.setItem("bagItems", JSON.stringify(bag));
+  listBag();
 }
